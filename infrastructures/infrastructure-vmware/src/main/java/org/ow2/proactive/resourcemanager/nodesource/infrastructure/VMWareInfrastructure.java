@@ -43,6 +43,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.json.JSONObject;
 import org.objectweb.proactive.core.ProActiveException;
 import org.objectweb.proactive.core.node.Node;
 import org.ow2.proactive.resourcemanager.exception.RMException;
@@ -52,7 +53,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 
-public class VMWareInfrastructure extends InfrastructureManager {
+public class VMWareInfrastructure extends InfrastructureManager implements CloudInfrastructure{
 
     public static final String INSTANCE_ID_NODE_PROPERTY = "instanceId";
 
@@ -330,4 +331,8 @@ public class VMWareInfrastructure extends InfrastructureManager {
         return nodeSource.getName().trim().replace(" ", "_").toLowerCase();
     }
 
+    @Override
+    public Set<JSONObject> getInstances() {
+        return connectorIaasController.getInstances(getInfrastructureId());
+    }
 }

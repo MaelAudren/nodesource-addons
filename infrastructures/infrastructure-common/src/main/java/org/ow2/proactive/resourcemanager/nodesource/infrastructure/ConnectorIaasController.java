@@ -96,6 +96,10 @@ public class ConnectorIaasController {
         connectorIaasClient.terminateInstance(infrastructureId, instanceId);
     }
 
+    public Set<JSONObject> getInstances(String infrastructureId){
+        return connectorIaasClient.getAllJsonInstancesByInfrastructureId(infrastructureId);
+    }
+
     private Set<String> createInstance(String infrastructureId, String instanceTag, String instanceJson) {
         Set<JSONObject> existingInstancesByInfrastructureId = connectorIaasClient
                 .getAllJsonInstancesByInfrastructureId(infrastructureId);
