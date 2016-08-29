@@ -53,7 +53,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 
-public class VMWareInfrastructure extends InfrastructureManager implements CloudInfrastructure{
+public class VMWareInfrastructure extends CloudInfrastructureManager {
 
     public static final String INSTANCE_ID_NODE_PROPERTY = "instanceId";
 

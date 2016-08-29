@@ -54,7 +54,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 
-public class OpenstackInfrastructure extends InfrastructureManager implements CloudInfrastructure{
+public class OpenstackInfrastructure extends  CloudInfrastructureManager {
 
     public static final String INSTANCE_TAG_NODE_PROPERTY = "instanceTag";
 

@@ -55,7 +55,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 
-public class AWSEC2Infrastructure extends InfrastructureManager implements CloudInfrastructure{
+public class AWSEC2Infrastructure extends CloudInfrastructureManager {
 
     public static final String INSTANCE_ID_NODE_PROPERTY = "instanceId";
 
